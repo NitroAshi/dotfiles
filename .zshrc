@@ -1,0 +1,1 @@
+/Users/nitro/Dropbox/Mackup/.zshrc
