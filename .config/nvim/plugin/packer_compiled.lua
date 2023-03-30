@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/Users/nitro/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/Users/nitro/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/nitro/.local/share/nvim/site/pack/packer/start/lualine.nvim",

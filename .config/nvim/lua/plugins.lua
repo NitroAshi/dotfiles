@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
   -- vsnip
   use 'hrsh7th/vim-vsnip'
   use 'hrsh7th/cmp-vsnip'
-  -- use 'rafamadriz/friendly-snippets'
+  use 'rafamadriz/friendly-snippets'
   
   -- lspkind
   -- use 'onsails/lspkind-nvim'
