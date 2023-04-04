@@ -3,6 +3,7 @@
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'NvChad/nvim-colorizer.lua'
+  use 'karb94/neoscroll.nvim'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'sbdchd/neoformat'
   
@@ -25,10 +26,15 @@ return require('packer').startup(function(use)
 --  use { 'williamboman/mason.nvim', run = ':MasonUpdate' }
 --  use 'williamboman/mason-lspconfig.nvim'
   use 'neovim/nvim-lspconfig'
+  use 'zchee/deoplete-jedi'
   
   -- lualina
   use {
       'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
+  -- colorscheme
+  use 'folke/tokyonight.nvim'
+  vim.cmd[[colorscheme tokyonight]]
+
 end)

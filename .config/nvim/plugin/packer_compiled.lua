@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/nitro/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/nitro/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/nitro/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/nitro/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/nitro/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/remote/us01home50/haohuan/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/remote/us01home50/haohuan/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/remote/us01home50/haohuan/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/remote/us01home50/haohuan/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/remote/us01home50/haohuan/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -76,78 +76,93 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["cmp-buffer"] = {
     loaded = true,
-    path = "/Users/nitro/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    path = "/remote/us01home50/haohuan/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
   ["cmp-cmdline"] = {
     loaded = true,
-    path = "/Users/nitro/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    path = "/remote/us01home50/haohuan/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
     url = "https://github.com/hrsh7th/cmp-cmdline"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "/Users/nitro/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    path = "/remote/us01home50/haohuan/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["cmp-path"] = {
     loaded = true,
-    path = "/Users/nitro/.local/share/nvim/site/pack/packer/start/cmp-path",
+    path = "/remote/us01home50/haohuan/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
   ["cmp-vsnip"] = {
     loaded = true,
-    path = "/Users/nitro/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
+    path = "/remote/us01home50/haohuan/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
+  },
+  ["deoplete-jedi"] = {
+    loaded = true,
+    path = "/remote/us01home50/haohuan/.local/share/nvim/site/pack/packer/start/deoplete-jedi",
+    url = "https://github.com/zchee/deoplete-jedi"
   },
   ["friendly-snippets"] = {
     loaded = true,
-    path = "/Users/nitro/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    path = "/remote/us01home50/haohuan/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["lualine.nvim"] = {
     loaded = true,
-    path = "/Users/nitro/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    path = "/remote/us01home50/haohuan/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   neoformat = {
     loaded = true,
-    path = "/Users/nitro/.local/share/nvim/site/pack/packer/start/neoformat",
+    path = "/remote/us01home50/haohuan/.local/share/nvim/site/pack/packer/start/neoformat",
     url = "https://github.com/sbdchd/neoformat"
+  },
+  ["neoscroll.nvim"] = {
+    loaded = true,
+    path = "/remote/us01home50/haohuan/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+    url = "https://github.com/karb94/neoscroll.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
-    path = "/Users/nitro/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    path = "/remote/us01home50/haohuan/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-colorizer.lua"] = {
     loaded = true,
-    path = "/Users/nitro/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    path = "/remote/us01home50/haohuan/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "https://github.com/NvChad/nvim-colorizer.lua"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/nitro/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    path = "/remote/us01home50/haohuan/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/Users/nitro/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    path = "/remote/us01home50/haohuan/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/Users/nitro/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    path = "/remote/us01home50/haohuan/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/nitro/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/remote/us01home50/haohuan/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/remote/us01home50/haohuan/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["vim-vsnip"] = {
     loaded = true,
-    path = "/Users/nitro/.local/share/nvim/site/pack/packer/start/vim-vsnip",
+    path = "/remote/us01home50/haohuan/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
   }
 }
