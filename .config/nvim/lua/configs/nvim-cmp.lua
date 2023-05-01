@@ -76,7 +76,8 @@ nvim_lsp.rust_analyzer.setup({
 })
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'pyright', 'bashls', 'zls' }
+-- local servers = { 'pyright', 'bashls', 'zls' }
+local servers = { 'bashls', 'zls' }
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
         on_attach = on_attach,
