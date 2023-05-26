@@ -64,8 +64,8 @@ vim.o.completeopt = "menuone,noselect"
 -- vim.g.completeopt = "menu,menuone,noselect,noinsert"
 -- 样式
 -- vim.o.background = "dark"
--- vim.o.termguicolors = true
--- vim.opt.termguicolors = true
+vim.o.termguicolors = true
+vim.opt.termguicolors = true
 -- 不可见字符的显示,(空格为·,tab之后设置)
 -- vim.o.list = true
 -- vim.o.listchars = "space:·"

@@ -27,6 +27,7 @@ return require('packer').startup(function(use)
 --  use 'williamboman/mason-lspconfig.nvim'
   use 'neovim/nvim-lspconfig'
   use 'zchee/deoplete-jedi'
+--  use 'simrat39/rust-tools.nvim'
   
   -- lualina
   use {

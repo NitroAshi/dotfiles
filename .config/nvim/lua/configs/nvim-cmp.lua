@@ -58,25 +58,27 @@ nvim_lsp.rust_analyzer.setup({
   settings = {
     ['rust-analyzer'] = {
       imports = {
-        granularity = {
-          group = 'module',
-        },
+        granularity = { group = 'module' },
         prefix = 'self',
       },
       cargo = {
-        buildScripts = {
-          enable = true,
-        },
+        buildScripts = { enable = true },
       },
       procMacro = {
         enable = false,
+      },
+      diagnostics = {
+        enable = true,
+        disabled = { "unresolved-proc-macro" },
+        enableExperimental = true,
       },
     },
   },
 })
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'pyright', 'bashls', 'zls' }
+-- local servers = { 'pyright', 'bashls', 'zls' }
+local servers = { 'pyright', 'zls' }
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
         on_attach = on_attach,
