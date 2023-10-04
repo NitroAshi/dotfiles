@@ -1,0 +1,167 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+### Added by Zinit's installer
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
+        print -P "%F{33} %F{34}Installation successful.%f%b" || \
+        print -P "%F{160} The clone has failed.%f%b"
+fi
+
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+autoload -Uz compinit
+compinit
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust 
+
+
+# 加载 powerlevel10k 主题
+zinit ice depth=1 
+zinit light romkatv/powerlevel10k
+
+
+zinit wait="0" lucid light-mode for \
+    hlissner/zsh-autopair \
+    hchbaw/zce.zsh \
+    wfxr/forgit
+
+# zinit light-mode for \
+#     blockf \
+#         zsh-users/zsh-completions \
+#     as="program" atclone="rm -f ^(rgg|agv)" \
+#         lilydjwg/search-and-view \
+#     atclone="dircolors -b LS_COLORS > c.zsh" atpull='%atclone' pick='c.zsh' \
+#         trapd00r/LS_COLORS \
+#     src="etc/git-extras-completion.zsh" \
+#         tj/git-extras
+
+
+zinit wait="1" lucid for \
+    OMZL::clipboard.zsh \
+    OMZL::history.zsh \
+    OMZL::key-bindings.zsh \
+    OMZL::completion.zsh 
+    # OMZL::git.zsh \
+    # OMZP::systemd/systemd.plugin.zsh \
+    # OMZP::git/git.plugin.zsh \
+    # OMZP::mvn/mvn.plugin.zsh \
+    # OMZP::sudo/sudo.plugin.zsh \
+    # OMZP::colored-man-pages/colored-man-pages.plugin.zsh 
+
+# zinit ice mv=":cht.sh -> cht.sh" atclone="chmod +x cht.sh" as="program"
+# zinit snippet https://cht.sh/:cht.sh
+
+# zinit ice mv=":zsh -> _cht" as="completion"
+# zinit snippet https://cheat.sh/:zsh
+
+# zinit svn for \
+#     OMZP::extract \
+#     OMZP::pip
+
+compinit
+# 快速目录跳转
+zinit ice lucid wait='1'
+zinit light skywind3000/z.lua
+zinit light Aloxaf/fzf-tab
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
+# zinit light zsh-users/zsh-syntax-highlighting
+zinit light zdharma-continuum/fast-syntax-highlighting
+ 
+
+# sharkdp/fd
+#zinit ice as"command" from"gh-r" mv"fd*/fd -> fd" pick"fd"
+#zinit light sharkdp/fd
+# sharkdp/bat
+#zinit ice as"command" from"gh-r" mv"bat*/bat -> bat" pick"bat"
+#zinit light sharkdp/bat
+# ogham/exa, replacement for ls
+# zinit ice wait"2" lucid from"gh-r" as"program" mv"bin/exa* -> exa"
+#zinit ice as"command" from"gh-r" mv"exa* -> exa" pick"bin/exa"
+#zinit light ogham/exa
+# BurntSushi/ripgrep
+#zinit ice from"gh-r" as"program" mv"ripgrep* -> ripgrep" pick"ripgrep/rg"
+#zinit light BurntSushi/ripgrep 
+# junegunn/fzf-bin
+#zinit ice from"gh-r" as"program"
+#zinit light junegunn/fzf
+# b4b4r07/httpstat
+#zinit ice as"program" mv"httpstat.sh -> httpstat" \
+#    pick"httpstat" atpull'!git reset --hard'
+#zinit light b4b4r07/httpstat
+#derailed/k9s
+#zinit ice as"command" from"gh-r" mv"k9s* -> k9s" pick"derailed/k9s"
+#zinit light derailed/k9s
+#sharkdp/hyperfine 命令行基准测试工具
+zinit ice as"command" from"gh-r" mv"hyperfine*/hyperfine -> hyperfine" pick"sharkdp/hyperfine"
+zinit light sharkdp/hyperfine
+#dbrgn/tealdeer
+zinit ice as"command" from"gh-r" mv"tealdeer* -> tldr" pick"dbrgn/tealdeer"
+zinit light dbrgn/tealdeer
+#chmln/sd sed 查找和替换
+zinit ice as"command" from"gh-r" mv"sd* -> sd" pick"sd"
+zinit light chmln/sd
+#dandavison/delta git diff
+zinit ice as"command" from"gh-r" mv"delta* -> delta" pick"delta"
+zinit light dandavison/delta
+# ogham/dog dns
+#zinit ice as"command" from"gh-r" mv"dog* -> dog" pick"bin/dog"
+#zinit light ogham/dog
+# knqyf263/pet 命令描述,按描述查找
+zinit ice as"command" from"gh-r" pick"pet"
+zinit light knqyf263/pet
+# alexellis/arkade k8s应用管理
+#zinit ice as"command" from"gh-r" mv"arkade* -> arkade" pick"arkade"
+#zinit light alexellis/arkade
+# ellie/atuin 历史命令管理
+zinit ice as"command" from"gh-r" mv"atuin* -> atuin" pick"atuin"
+zinit light atuinsh/atuin
+# akavel/up 交互式管道工具
+zinit ice as"command" from"gh-r" mv"up* -> up" pick"up"
+zinit light akavel/up
+# helix-editor/helix 终端文本编辑工具 体积很大
+zinit ice as"command" from"gh-r" mv"helix*/hx -> hx" pick"helix/hx"
+zinit light helix-editor/helix 
+
+
+zstyle ':completion:*' menu select
+
+# source your own shrc file if exists
+#[ -f ~/.config/.env.sh ] && source ~/.config/.env.sh
+
+# source your own alias file if exists
+#[ -f ~/.config/.alias.sh ] && source ~/.config/.alias.sh
+
+# source your own function file if exists
+#[ -f ~/.config/.fun.sh ] && source ~/.config/.fun.sh
+
+# source your proxy shrc file if exists
+#[ -f ~/.config/.proxy.sh ] && source ~/.config/.proxy.sh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+# 补全快捷键重设
+bindkey ',' autosuggest-accept
+
+
+### End of Zinit's installer chunk
+
+source /home/nitro/.config/etc/bash_aliases.sh
+source /home/nitro/.config/etc/nitro.sh
