@@ -40,15 +40,21 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 -- clangd rust_analyzer
+
+nvim_lsp.clangd.setup{}
 nvim_lsp.clangd.setup({
   on_attach = on_attach,
   capabilities = capabilities,
   cmd = {
     'clangd',
+--    '-j=8'
     '--background-index',
-    '--suggest-missing-includes',
+    '-std=c++11',
+--    '--malloc-trim',
+--    '--pch-stroage=memory',
+--    '--suggest-missing-includes',
     '--clang-tidy',
-    '--header-insertion=iwyu',
+--    '--header-insertion=iwyu',
   },
 })
 
@@ -78,11 +84,15 @@ nvim_lsp.rust_analyzer.setup({
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 -- local servers = { 'pyright', 'bashls', 'zls' }
+-- local servers = { 'pyright', 'zls', 'clangd' }
 local servers = { 'pyright', 'zls' }
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
         on_attach = on_attach,
         capabilities = capabilities,
+        flags = {
+            debounce_text_changes = 150,
+        }
     }
 end
 
@@ -178,3 +188,5 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
     prefix = '● ',
   }
 })
+
+vim.lsp.set_log_level("off")
