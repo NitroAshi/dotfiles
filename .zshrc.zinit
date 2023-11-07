@@ -73,7 +73,7 @@ zinit wait="1" lucid for \
 #     OMZP::extract \
 #     OMZP::pip
 
-compinit
+# compinit
 # 快速目录跳转
 zinit ice lucid wait='1'
 zinit light skywind3000/z.lua
