@@ -35,7 +35,12 @@ return require('packer').startup(function(use)
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   -- colorscheme
-  use 'folke/tokyonight.nvim'
-  vim.cmd[[colorscheme tokyonight]]
+   use 'folke/tokyonight.nvim'
+   vim.cmd[[colorscheme tokyonight]]
+  -- use 'Mofiqul/dracula.nvim'
+  -- vim.cmd[[colorscheme dracula]]
+
+  -- Comment.nvim 
+  use 'numToStr/Comment.nvim'
 
 end)

@@ -47,15 +47,16 @@ nvim_lsp.clangd.setup({
   capabilities = capabilities,
   cmd = {
     'clangd',
---    '-j=8'
+    '-j=12',
     '--background-index',
-    '-std=c++11',
 --    '--malloc-trim',
 --    '--pch-stroage=memory',
 --    '--suggest-missing-includes',
     '--clang-tidy',
 --    '--header-insertion=iwyu',
   },
+ root_dir = nvim_lsp.util.root_pattern("/remote/hspice22/haohuan/clients/compile_commands.json"),
+--  root_dir = nvim_lsp.util.root_pattern("compile_commands.json"),
 })
 
 nvim_lsp.rust_analyzer.setup({
@@ -190,3 +191,4 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
 })
 
 vim.lsp.set_log_level("off")
+-- vim.lsp.set_log_level("debug")
