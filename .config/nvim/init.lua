@@ -1,15 +1,14 @@
-require("basic")
+-- Set <space> as the leader key
+-- See `:help mapleader`
+--  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
--- colorscheme tokyonight
-require('tokyonight').setup()
-require('configs/tokyonight')
+-- Set to true if you have a Nerd Font installed and selected in the terminal
+vim.g.have_nerd_font = true
 
-require("plugins")
-require("configs.nvim-treesitter")
-require("lualine")
-require("configs.lualine")
--- require("mason").setup()
--- require("mason-lspconfig").setup()
-require("configs.nvim-cmp")
-require('neoscroll').setup()
-require('Comment').setup()
+-- vim.lsp.set_log_level("debug")
+
+require("config.options")
+require("config.keymaps")
+require("config.lazy")

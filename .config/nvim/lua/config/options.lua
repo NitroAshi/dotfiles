@@ -8,11 +8,12 @@
 vim.wo.number = true
 vim.wo.relativenumber = false
 -- 提示80行的宽度
-vim.wo.colorcolumn = '80'
+vim.wo.colorcolumn = "80"
 -- 高亮所在行
 vim.wo.cursorline = true
 -- 显示左侧图标指示列?
 -- vim.wo.signcolumn = "yes"
+-- vim.opt.signcolumn = "yes"
 -- 缩进4个空格为一个Tab
 vim.o.tabstop = 4
 vim.bo.tabstop = 4
@@ -29,8 +30,8 @@ vim.o.autoindent = true
 vim.bo.autoindent = true
 vim.o.smartindent = true
 -- 搜索大小写不敏感
--- vim.o.ignorecase = true
--- vim.o.smartcase = true
+vim.o.ignorecase = true
+vim.o.smartcase = true
 -- 搜索不要高亮
 -- vim.o.hlsearch = false
 -- 边输入边搜索
@@ -60,15 +61,16 @@ vim.o.mouse = "a"
 -- vim.o.splitbelow = true
 -- vim.o.splitright = true
 -- 自动补全不自动选中 (不一定有效)
-vim.o.completeopt = "menuone,noselect"
+-- vim.o.completeopt = "menuone,noselect"
 -- vim.g.completeopt = "menu,menuone,noselect,noinsert"
 -- 样式
 -- vim.o.background = "dark"
 vim.o.termguicolors = true
 vim.opt.termguicolors = true
 -- 不可见字符的显示,(空格为·,tab之后设置)
--- vim.o.list = true
+vim.opt.list = true
 -- vim.o.listchars = "space:·"
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 -- 补全增强?
 -- vim.o.wildmenu = true
 -- Don't pass messages to |ins-completin menu|??
@@ -80,3 +82,16 @@ vim.o.pumheight = 10
 -- 使用增强状态栏插件后不需要vim模式提示功能
 vim.o.showmode = false
 
+-- Sync clipboard between OS and Neovim.
+--  Remove this option if you want your OS clipboard to remain independent.
+--  See `:help 'clipboard'`
+vim.opt.clipboard = "unnamedplus"
+
+-- Enable break indent
+vim.opt.breakindent = true
+
+-- Save undo history
+vim.opt.undofile = true
+
+-- Preview substitutions live, as you type!
+vim.opt.inccommand = "split"
