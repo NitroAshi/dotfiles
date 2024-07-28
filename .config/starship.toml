@@ -1,0 +1,11 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+
+[battery]
+disabled = true
+
+[cmd_duration]
+disabled = true
+
+[os]
+disabled = true
