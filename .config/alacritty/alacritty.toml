@@ -1,0 +1,390 @@
+[colors.bright]
+black = "#6b7089"
+blue = "#91acd1"
+cyan = "#95c4ce"
+green = "#c0ca8e"
+magenta = "#ada0d3"
+red = "#e98989"
+white = "#d2d4de"
+yellow = "#e9b189"
+
+[colors.normal]
+black = "#161821"
+blue = "#84a0c6"
+cyan = "#89b8c2"
+green = "#b4be82"
+magenta = "#a093c7"
+red = "#e27878"
+white = "#c6c8d1"
+yellow = "#e2a478"
+
+[colors.primary]
+background = "#161821"
+foreground = "#d2d4de"
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1.0"
+
+[font]
+size = 14
+
+[font.bold]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 1
+
+[iceberg_dark.bright]
+black = "#6b7089"
+blue = "#91acd1"
+cyan = "#95c4ce"
+green = "#c0ca8e"
+magenta = "#ada0d3"
+red = "#e98989"
+white = "#d2d4de"
+yellow = "#e9b189"
+
+[iceberg_dark.normal]
+black = "#161821"
+blue = "#84a0c6"
+cyan = "#89b8c2"
+green = "#b4be82"
+magenta = "#a093c7"
+red = "#e27878"
+white = "#c6c8d1"
+yellow = "#e2a478"
+
+[iceberg_dark.primary]
+background = "#161821"
+foreground = "#d2d4de"
+
+[monokai_pro.bright]
+black = "#727072"
+blue = "#FC9867"
+cyan = "#78DCE8"
+green = "#A9DC76"
+magenta = "#AB9DF2"
+red = "#FF6188"
+white = "#FCFCFA"
+yellow = "#FFD866"
+
+[monokai_pro.normal]
+black = "#403E41"
+blue = "#FC9867"
+cyan = "#78DCE8"
+green = "#A9DC76"
+magenta = "#AB9DF2"
+red = "#FF6188"
+white = "#FCFCFA"
+yellow = "#FFD866"
+
+[monokai_pro.pop_os.bright]
+black = "#88807C"
+blue = "#48B9C7"
+cyan = "#34E2E2"
+green = "#73C48F"
+magenta = "#AD7FA8"
+red = "#F15D22"
+white = "#EEEEEC"
+yellow = "#FFCE51"
+
+[monokai_pro.pop_os.normal]
+black = "#333333"
+blue = "#3465A4"
+cyan = "#06989A"
+green = "#4E9A06"
+magenta = "#75507B"
+red = "#CC0000"
+white = "#D3D7CF"
+yellow = "#C4A000"
+
+[monokai_pro.pop_os.primary]
+background = "#333333"
+foreground = "#F2F2F2"
+
+[monokai_pro.primary]
+background = "#2D2A2E"
+foreground = "#FCFCFA"
+
+[monokai_soda.bright]
+black = "#625e4c"
+blue = "#9d65ff"
+cyan = "#58d1eb"
+green = "#98e024"
+magenta = "#f4005f"
+red = "#f4005f"
+white = "#f6f6ef"
+yellow = "#e0d561"
+
+[monokai_soda.normal]
+black = "#1a1a1a"
+blue = "#9d65ff"
+cyan = "#58d1eb"
+green = "#98e024"
+magenta = "#f4005f"
+red = "#f4005f"
+white = "#c4c5b5"
+yellow = "#fa8419"
+
+[monokai_soda.primary]
+background = "#1a1a1a"
+foreground = "#c4c5b5"
+
+[night_owl.bright]
+black = "#575656"
+blue = "#82aaff"
+cyan = "#7fdbca"
+green = "#22da6e"
+magenta = "#c792ea"
+red = "#ef5350"
+white = "#ffffff"
+yellow = "#ffeb95"
+
+[night_owl.cursor]
+cursor = "#d6deeb"
+text = "#011627"
+
+[night_owl.normal]
+black = "#011627"
+blue = "#82aaff"
+cyan = "#21c7a8"
+green = "#22da6e"
+magenta = "#c792ea"
+red = "#ef5350"
+white = "#ffffff"
+yellow = "#c5e478"
+
+[night_owl.primary]
+background = "#011627"
+foreground = "#d6deeb"
+
+[night_owl.selection]
+background = "#1b90dd"
+
+[nightfly.bright]
+black = "#7c8f8f"
+blue = "#82aaff"
+cyan = "#7fdbca"
+green = "#21c7a8"
+magenta = "#ae81ff"
+red = "#ff5874"
+white = "#d6deeb"
+yellow = "#ecc48d"
+
+[nightfly.cursor]
+cursor = "#9ca1aa"
+text = "#fafafa"
+
+[nightfly.normal]
+black = "#1d3b53"
+blue = "#82aaff"
+cyan = "#7fdbca"
+green = "#a1cd5e"
+magenta = "#c792ea"
+red = "#fc514e"
+white = "#a1aab8"
+yellow = "#e3d18a"
+
+[nightfly.primary]
+background = "#011627"
+foreground = "#acb4c2"
+
+[nightfly.selection]
+background = "#b2ceee"
+text = "#080808"
+
+[nord.bright]
+black = "#4C566A"
+blue = "#81A1C1"
+cyan = "#8FBCBB"
+green = "#A3BE8C"
+magenta = "#B48EAD"
+red = "#BF616A"
+white = "#ECEFF4"
+yellow = "#EBCB8B"
+
+[nord.normal]
+black = "#3B4252"
+blue = "#81A1C1"
+cyan = "#88C0D0"
+green = "#A3BE8C"
+magenta = "#B48EAD"
+red = "#BF616A"
+white = "#E5E9F0"
+yellow = "#EBCB8B"
+
+[nord.primary]
+background = "#2E3440"
+foreground = "#D8DEE9"
+
+[schemes.blood_moon.bright]
+black = "#696969"
+blue = "#007FFF"
+cyan = "#00CCCC"
+green = "#03C03C"
+magenta = "#FF1493"
+red = "#FF2400"
+white = "#FFFAFA"
+yellow = "#FDFF00"
+
+[schemes.blood_moon.normal]
+black = "#10100E"
+blue = "#0087BD"
+cyan = "#20B2AA"
+green = "#009F6B"
+magenta = "#9A4EAE"
+red = "#C40233"
+white = "#C6C6C4"
+yellow = "#FFD700"
+
+[schemes.blood_moon.primary]
+background = "#10100E"
+foreground = "#C6C6C4"
+
+[schemes.schuam_dark.bright]
+black = "#626262"
+blue = "#0080ff"
+cyan = "#00eaea"
+green = "#00ff00"
+magenta = "#ff55ff"
+red = "#ff4400"
+white = "#dedede"
+yellow = "#ffff00"
+
+[schemes.schuam_dark.normal]
+black = "#262626"
+blue = "#006cd8"
+cyan = "#00a1a1"
+green = "#00a100"
+magenta = "#ff00ff"
+red = "#cc0000"
+white = "#aaaaaa"
+yellow = "#a6a600"
+
+[schemes.schuam_dark.primary]
+background = "#000000"
+foreground = "#aaaaaa"
+
+[schemes.schuam_solarized_dark.bright]
+black = "#0c677e"
+blue = "#2a9dea"
+cyan = "#2db0a5"
+green = "#1aba27"
+magenta = "#fe61fe"
+red = "#df5017"
+white = "#b9d2d3"
+yellow = "#daa400"
+
+[schemes.schuam_solarized_dark.normal]
+black = "#083f4d"
+blue = "#268bd2"
+cyan = "#26958c"
+green = "#169921"
+magenta = "#da54da"
+red = "#dc322f"
+white = "#839496"
+yellow = "#b58900"
+
+[schemes.schuam_solarized_dark.primary]
+background = "#002b36"
+foreground = "#839496"
+
+[schemes.schuam_solarized_light.bright]
+black = "#b3afa2"
+blue = "#0033ff"
+cyan = "#00c3c3"
+green = "#00a800"
+magenta = "#ff00ff"
+red = "#ff0000"
+white = "#2c2c2c"
+yellow = "#ffff00"
+
+[schemes.schuam_solarized_light.normal]
+black = "#d4cfbf"
+blue = "#0039d6"
+cyan = "#00958b"
+green = "#007f00"
+magenta = "#b000b0"
+red = "#cc0000"
+white = "#717171"
+yellow = "#939a15"
+
+[schemes.schuam_solarized_light.primary]
+background = "#e5dfce"
+foreground = "#717171"
+
+[selection]
+save_to_clipboard = false
+
+[taerminal.bright]
+black = "#6f6f6f"
+blue = "#c2e3ff"
+cyan = "#c0e9f8"
+green = "#d6fcba"
+magenta = "#ffc6ff"
+red = "#fe978b"
+white = "#ffffff"
+yellow = "#fffed5"
+
+[taerminal.cursor]
+background = "#f0f0f0"
+foreground = "#26282a"
+
+[taerminal.normal]
+black = "#26282a"
+blue = "#8bbce5"
+cyan = "#a2e1f8"
+green = "#b4fb73"
+magenta = "#ffb2fe"
+red = "#ff8878"
+white = "#f1f1f1"
+yellow = "#fffcb7"
+
+[taerminal.primary]
+background = "#26282a"
+foreground = "#f0f0f0"
+
+[tom_night.bright]
+black = "#666666"
+blue = "#81a2be"
+cyan = "#54ced6"
+green = "#9ec400"
+magenta = "#b77ee0"
+red = "#ff3334"
+white = "#282a2e"
+yellow = "#f0c674"
+
+[tom_night.cursor]
+cursor = "#ffffff"
+text = "#1d1f21"
+
+[tom_night.normal]
+black = "#1d1f21"
+blue = "#81a2be"
+cyan = "#70c0ba"
+green = "#b5bd68"
+magenta = "#b294bb"
+red = "#cc6666"
+white = "#373b41"
+yellow = "#e6c547"
+
+[tom_night.primary]
+background = "#1d1f21"
+foreground = "#c5c8c6"
+
+[window]
+title = "Alacritty"
