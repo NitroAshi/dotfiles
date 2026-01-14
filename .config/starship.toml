@@ -9,3 +9,6 @@ disabled = true
 
 [os]
 disabled = true
+
+[python]
+disabled = true

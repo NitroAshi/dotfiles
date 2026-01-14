@@ -30,19 +30,19 @@ WINIT_X11_SCALE_FACTOR = "1.0"
 size = 14
 
 [font.bold]
-family = "JetBrainsMono Nerd Font"
+family = "FiraCodeNerdFont"
 style = "Bold"
 
 [font.bold_italic]
-family = "JetBrainsMono Nerd Font"
+family = "FiraCodeNerdFont"
 style = "Bold Italic"
 
 [font.italic]
-family = "JetBrainsMono Nerd Font"
+family = "FiraCodeNerdFont"
 style = "Italic"
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "FiraCodeNerdFont"
 style = "Regular"
 
 [font.offset]
